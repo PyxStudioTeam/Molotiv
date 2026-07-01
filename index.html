@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff">
+    <title>Molotiv - женская одежда</title>
+    <meta name="description" content="Кликабельный демо-сайт интернет-магазина женской одежды Molotiv. Каталог, карточка товара, корзина и выбор доставки без backend.">
+    <link rel="preload" as="image" href="assets/hero-collection.png">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">Перейти к каталогу</a>
+
+    <header class="site-header" data-elevated="false">
+      <div class="header-inner">
+        <button class="plain-button menu-toggle" type="button" aria-label="Открыть меню" data-open-menu>Меню</button>
+        <a class="brand" href="#top" aria-label="Molotiv на главную">MOLOTIV</a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="#catalog">Каталог</a>
+          <a href="#fit">Размеры</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#about">О магазине</a>
+        </nav>
+        <div class="header-actions">
+          <button class="plain-button" type="button" data-open-search>Поиск</button>
+          <button class="plain-button" type="button" data-show-favorites>Избранное <span data-fav-count>0</span></button>
+          <button class="bag-button" type="button" data-open-cart aria-label="Открыть корзину">Корзина <span data-cart-count>0</span></button>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-menu" data-mobile-menu aria-hidden="true">
+      <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Меню">
+        <button class="close-button" type="button" data-close-menu aria-label="Закрыть меню">Закрыть</button>
+        <a href="#catalog" data-menu-link>Каталог</a>
+        <a href="#fit" data-menu-link>Размеры</a>
+        <a href="#delivery" data-menu-link>Доставка</a>
+        <a href="#about" data-menu-link>О магазине</a>
+      </div>
+    </aside>
+
+    <main id="top">
+      <section class="hero">
+        <img src="assets/hero-collection.png" width="1672" height="941" fetchpriority="high" decoding="async" alt="Женщина в тренче и светлом трикотаже в спокойном городском интерьере" class="hero-image">
+        <div class="hero-scrim"></div>
+        <div class="hero-content reveal">
+          <p class="hero-kicker">Новая капсула</p>
+          <h1>Женская одежда на каждый день.</h1>
+          <p>Стартовый каталог на 150 артикулов: пальто, трикотаж, платья и костюмы.</p>
+          <a class="primary-link" href="#catalog">Смотреть каталог</a>
+        </div>
+      </section>
+
+      <section class="collection-strip" aria-label="Главные категории">
+        <a href="#catalog" data-category-shortcut="outerwear">Пальто</a>
+        <a href="#catalog" data-category-shortcut="knitwear">Трикотаж</a>
+        <a href="#catalog" data-category-shortcut="dresses">Платья</a>
+        <a href="#catalog" data-category-shortcut="suits">Костюмы</a>
+      </section>
+
+      <section class="section catalog-section" id="catalog">
+        <div class="section-heading reveal">
+          <h2>Каталог для первого запуска</h2>
+          <p>Демо показывает механику выбора размеров, цветов, избранного и корзины. Реальный каталог можно расширять после запуска.</p>
+        </div>
+
+        <div class="catalog-tools reveal" aria-label="Фильтры каталога">
+          <div class="filter-row" role="list" aria-label="Категории">
+            <button class="filter-chip is-active" type="button" data-filter="all">Все</button>
+            <button class="filter-chip" type="button" data-filter="outerwear">Пальто</button>
+            <button class="filter-chip" type="button" data-filter="knitwear">Трикотаж</button>
+            <button class="filter-chip" type="button" data-filter="dresses">Платья</button>
+            <button class="filter-chip" type="button" data-filter="suits">Костюмы</button>
+          </div>
+          <label class="catalog-search">
+            <span>Найти</span>
+            <input type="search" name="catalog-search" data-inline-search placeholder="Например, пальто или 48…" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="product-grid" data-product-grid aria-live="polite"></div>
+        <p class="empty-state" data-empty-state hidden>Ничего не найдено. Попробуйте другой запрос или категорию.</p>
+      </section>
+
+      <section class="section fit-section" id="fit">
+        <div class="fit-copy reveal">
+          <h2>Размеры видны до добавления в корзину</h2>
+          <p>Покупатель сразу понимает, какие варианты доступны. Это особенно важно для верхней одежды, трикотажа и сезонных коллекций.</p>
+        </div>
+        <div class="fit-grid reveal" aria-label="Подход к размерной сетке">
+          <article>
+            <strong>42-54</strong>
+            <span>Основной диапазон размеров для запуска.</span>
+          </article>
+          <article>
+            <strong>3 цвета</strong>
+            <span>Цвет влияет на карточку, корзину и итог заказа.</span>
+          </article>
+          <article>
+            <strong>1 таблица</strong>
+            <span>Размерная сетка открывается рядом с выбором размера.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section delivery-section" id="delivery">
+        <div class="section-heading reveal">
+          <h2>Доставка без лишних шагов</h2>
+          <p>В демо покупатель выбирает способ доставки в корзине. Интеграции можно подключить на backend-этапе.</p>
+        </div>
+        <div class="delivery-grid reveal">
+          <article class="delivery-card">
+            <h3>СДЭК</h3>
+            <p>Пункты выдачи и курьерская доставка по регионам.</p>
+            <span>от 390 ₽</span>
+          </article>
+          <article class="delivery-card">
+            <h3>Яндекс Доставка</h3>
+            <p>Быстрая городская доставка и удобный трекинг.</p>
+            <span>от 450 ₽</span>
+          </article>
+          <article class="delivery-card">
+            <h3>Курьер по Москве</h3>
+            <p>Доставка на дом с возможностью примерки по договоренности.</p>
+            <span>от 600 ₽</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="about-layout reveal">
+          <div>
+            <h2>Сайт выглядит как магазин, а не как макет.</h2>
+            <p>Этот вариант можно показать клиенту: он открывается в браузере, работает без сервера и демонстрирует будущую логику магазина.</p>
+          </div>
+          <div class="about-notes">
+            <p>Backend, база, оплата, CRM и службы доставки остаются отдельным этапом.</p>
+            <p>Стартовый запуск можно делать с 100-150 артикулами, затем расширять каталог по сезонам.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand footer-brand" href="#top">MOLOTIV</a>
+        <p>Демо интернет-магазина женской одежды.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#catalog">Каталог</a>
+        <a href="#delivery">Доставка</a>
+        <button class="plain-button" type="button" data-open-cart>Корзина</button>
+      </div>
+    </footer>
+
+    <section class="search-layer" data-search-layer aria-hidden="true">
+      <div class="search-panel" role="dialog" aria-modal="true" aria-label="Поиск по каталогу">
+        <button class="close-button" type="button" data-close-search aria-label="Закрыть поиск">Закрыть</button>
+        <label>
+          <span>Что ищем?</span>
+          <input type="search" name="global-search" data-global-search placeholder="Например, пальто или 48…" autocomplete="off">
+        </label>
+        <div class="search-results" data-search-results></div>
+      </div>
+    </section>
+
+    <section class="product-layer" data-product-layer aria-hidden="true">
+      <div class="product-panel" role="dialog" aria-modal="true" aria-label="Карточка товара">
+        <button class="close-button product-close" type="button" data-close-product aria-label="Закрыть карточку товара">Закрыть</button>
+        <div data-product-detail></div>
+      </div>
+    </section>
+
+    <section class="cart-layer" data-cart-layer aria-hidden="true">
+      <div class="cart-panel" role="dialog" aria-modal="true" aria-label="Корзина">
+        <div class="cart-head">
+          <h2>Корзина</h2>
+          <button class="close-button" type="button" data-close-cart aria-label="Закрыть корзину">Закрыть</button>
+        </div>
+        <div class="cart-items" data-cart-items></div>
+        <form class="checkout-form" data-checkout-form>
+          <fieldset>
+            <legend>Способ доставки</legend>
+            <label class="radio-card">
+              <input type="radio" name="delivery" value="СДЭК" checked>
+              <span><strong>СДЭК</strong><small>Пункт выдачи или курьер по России</small></span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="delivery" value="Яндекс Доставка">
+              <span><strong>Яндекс Доставка</strong><small>Быстро по городу, удобно для Москвы</small></span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="delivery" value="Курьер по Москве">
+              <span><strong>Курьер по Москве</strong><small>Домой или в офис, примерка обсуждается</small></span>
+            </label>
+          </fieldset>
+
+          <div class="checkout-fields">
+            <label>
+              <span>Имя</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Например, Мария…">
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Например, +7 900 000-00-00…">
+            </label>
+            <label>
+              <span>Город</span>
+              <input type="text" name="city" autocomplete="address-level2" placeholder="Например, Москва…">
+            </label>
+          </div>
+
+          <div class="cart-total">
+            <span>Итого</span>
+            <strong data-cart-total>0 ₽</strong>
+          </div>
+          <button class="checkout-button" type="submit">Оформить демо-заказ</button>
+          <p class="form-note">Оплата и отправка данных не подключены. Это демонстрация будущего сценария.</p>
+          <p class="form-status" data-form-status role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
